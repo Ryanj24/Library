@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Library</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/10b01c19ab.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
     <div class="main-container">
         <header class="header-section">
             <h1>JavaScript Library</h1>
-            <p>Add your favourite books to your library below to keep track!</p>
+            <p>Add your favourite books below to keep track of your reading!</p>
         </header>
 
         <section class="library-container">
@@ -32,17 +33,14 @@
                         <td>JK Rowling</td>
                         <td>400</td>
                         <td>Yes</td>
-                        <td><button>Remove</button></td>
-                    </tr>
-                    <tr>
-                        <td>Harry Potter</td>
-                        <td>JK Rowling</td>
-                        <td>400</td>
-                        <td>Yes</td>
-                        <td><button>Remove</button></td>
+                        <td><button><i class="fa-solid fa-trash"></i>Remove</button></td>
                     </tr>
                 </tbody>
             </table>
+            <div class="btns">
+                <button><i class="fa-solid fa-plus"></i>Add Book</button>
+                <button><i class="fa-solid fa-eraser"></i>Clear Library</button>
+            </div>
         </section>
     </div>
 

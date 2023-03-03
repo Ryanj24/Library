@@ -8,8 +8,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: aqua;
     height: 100vh;
+    background-color: rgb(204, 204, 204);
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 
@@ -17,7 +21,6 @@ header {
     display: grid;
     grid-template-rows: 2fr 1fr;
     grid-template-columns: repeat(4, 1fr);
-    background-color: blue;
     padding: 20px;
     width: 100%;
 }
@@ -27,6 +30,7 @@ header h1 {
     grid-row: 1 / 2;
     margin-bottom: 30px;
     text-align: center;
+    font-size: 40px;
 }
 
 header p {
@@ -34,20 +38,24 @@ header p {
     grid-row: 2 / 3;
     margin-bottom: 30px;
     text-align: center;
+    font-size: 25px;
 }
 
 .library-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 50px;
-    background-color: yellow;
-    padding: 30px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
 }
 
 .library-container #bookTable {
     table-layout: fixed;
     border-collapse: collapse;
     letter-spacing: 1px;
+    margin-bottom: 40px;
 }
 
 .library-container #bookTable thead th {
@@ -83,4 +91,33 @@ header p {
     text-align: center;
     border-right: 1px solid;
     font-size: 20px;
+}
+
+.library-container #bookTable tbody button {
+    display: flex;
+    padding: 10px;
+}
+
+.library-container #bookTable tbody button i {
+    margin-right: 10px;
+}
+
+.btns {
+    display: flex;
+    padding: 20px;
+}
+
+.btns button {
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+}
+
+.btns button i{
+    margin-right: 15px;
+}
+
+.btns button:first-child {
+    margin-right: 40px;
 }
