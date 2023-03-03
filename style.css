@@ -3,3 +3,26 @@
     margin: 0;
     padding: 0;
 }
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+}
+
+header {
+    height: 30%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+
+header h1 {
+    margin-bottom: 30px;
+}
