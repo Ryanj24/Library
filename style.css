@@ -121,3 +121,26 @@ header p {
 .btns button:first-child {
     margin-right: 40px;
 }
+
+
+.modal-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    pointer-events: all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background-color: aqua;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
