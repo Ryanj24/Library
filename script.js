@@ -25,11 +25,21 @@ myForm.addEventListener("submit", (e) => {
     let bookTitle = document.querySelector("#title").value;
     let bookAuthor = document.querySelector("#author").value;
     let bookPages = document.querySelector("#pages").value;
-    let isCompleted = document.querySelector("#completed").checked;
+    let completedCheck = document.querySelector("#completed").checked;
+    let isCompleted = "";
 
+    if (completedCheck === true) {
+        isCompleted = "Yes";
+    } else {
+        isCompleted = "No";
+    }
+
+    console.log(completedCheck);
+    console.log(isCompleted);
 
     let newBook = new Book(bookTitle, bookAuthor, bookPages, isCompleted);
     addBookToLibrary(newBook);
+    addBookToTable(newBook);
 
     myForm.reset();
     modalContainer.classList.remove("active");
@@ -46,4 +56,17 @@ function Book(title, author, pages, completed) {
 
 function addBookToLibrary(book) {
     myLibrary.push(book);
+}
+
+function addBookToTable(book) {
+    let newRow = document.createElement("tr");
+    for (const property in book) {
+        let newCell = document.createElement("td");
+        newCell.innerHTML = book[property];
+        newRow.appendChild(newCell);
+    }
+    let actionCell = document.createElement("td");
+    actionCell.innerHTML = '<button class="action-buttons"><i class="fa-solid fa-trash"></i>Remove</button>'
+    newRow.appendChild(actionCell);
+    tableRows.appendChild(newRow);
 }
