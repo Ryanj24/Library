@@ -24,10 +24,10 @@
                         <th>Author</th>
                         <th>Pages</th>
                         <th>Completed</th>
-                        <th>Remove</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tableRows">
                     <tr>
                         <td>Harry Potter</td>
                         <td>JK Rowling</td>
@@ -38,8 +38,8 @@
                 </tbody>
             </table>
             <div class="btns">
-                <button><i class="fa-solid fa-plus"></i>Add Book</button>
-                <button><i class="fa-solid fa-eraser"></i>Clear Library</button>
+                <button id = "addBtn"><i class="fa-solid fa-plus"></i>Add Book</button>
+                <button id = "clearBtn"><i class="fa-solid fa-eraser"></i>Clear Library</button>
             </div>
         </section>
 
@@ -64,7 +64,7 @@
                     </div>
                     <div class="isCompleted">
                         <label for="completed">Completed</label>
-                        <input type="checkbox" id="completed" name="isCompleted" value="True">
+                        <input type="checkbox" id="completed" name="isCompleted">
                     </div>
                     <div class="btn">
                         <input type="submit" value="Add Book">

@@ -56,6 +56,7 @@ header p {
     border-collapse: collapse;
     letter-spacing: 1px;
     margin-bottom: 40px;
+    min-width: 800px;
 }
 
 .library-container #bookTable thead th {
@@ -96,6 +97,7 @@ header p {
 .library-container #bookTable tbody button {
     display: flex;
     padding: 10px;
+    width: 100px;
 }
 
 .library-container #bookTable tbody button i {
@@ -112,9 +114,10 @@ header p {
     font-size: 20px;
     border-radius: 15px;
     border: none;
+    width: 200px;
 }
 
-.btns button i{
+.btns button i {
     margin-right: 15px;
 }
 
@@ -129,13 +132,20 @@ header p {
     top: 0;
     height: 100vh;
     width: 100vw;
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.2);
-    pointer-events: all;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    pointer-events: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
+
+.modal-container.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
 
 .modal {
     background-color: aqua;
@@ -165,6 +175,7 @@ header p {
     font-size: 30px;
     border: none;
     background: none;
+    cursor: pointer;
 }
 
 .modal #myForm {
@@ -215,4 +226,8 @@ header p {
     font-size: 20px;
     border: none;
     border-radius: 5px;
+}
+
+.modal #myForm div:last-child input:hover {
+    cursor: pointer;
 }
