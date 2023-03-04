@@ -143,4 +143,76 @@ header p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.modal .modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+    padding: 10px;
+
+}
+
+.modal .modal-header button {
+    position: absolute;
+    right: 20px;
+    padding: 5px;
+    font-size: 30px;
+    border: none;
+    background: none;
+}
+
+.modal #myForm {
+    padding: 15px;
+    font-size: 30px;
+}
+
+.modal #myForm div:not(.isCompleted) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal #myForm div:not(.isCompleted, .btn) input {
+    margin-left: 20px;
+    font-size: 25px;
+    margin-top: 3px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.modal #myForm div:not(.btn) {
+    margin-bottom: 20px;
+}
+
+.modal #myForm div:nth-child(4) {
+    display: flex;
+    align-items: center;
+}
+
+.modal #myForm div:nth-child(4) input {
+    margin-left: 15px;
+    height: 20px;
+    width: 20px;
+    margin-top: 2px;
+}
+
+.modal #myForm div:last-child {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.modal #myForm div:last-child input {
+    padding: 10px 25px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
 }
