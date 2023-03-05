@@ -20,6 +20,14 @@ modalCloseBtn.addEventListener("click", () => {
     modalContainer.classList.remove("active");
 })
 
+tableRows.addEventListener("click", function(e) {
+    if (e.target.classList.contains("action-buttons")) {
+        //console.log("Hello");
+        //console.log(e.target.parentNode.parentNode.parentNode);
+        e.target.parentNode.parentNode.parentNode.removeChild(e.target.parentNode.parentNode);
+    }
+})
+
 myForm.addEventListener("submit", (e) => {
     e.preventDefault();
     let bookTitle = document.querySelector("#title").value;
@@ -34,8 +42,8 @@ myForm.addEventListener("submit", (e) => {
         isCompleted = "No";
     }
 
-    console.log(completedCheck);
-    console.log(isCompleted);
+    //console.log(completedCheck);
+    //console.log(isCompleted);
 
     let newBook = new Book(bookTitle, bookAuthor, bookPages, isCompleted);
     addBookToLibrary(newBook);
@@ -44,7 +52,7 @@ myForm.addEventListener("submit", (e) => {
     myForm.reset();
     modalContainer.classList.remove("active");
 
-    console.log(myLibrary);
+    //console.log(myLibrary);
 })
 
 function Book(title, author, pages, completed) {

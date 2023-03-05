@@ -94,10 +94,14 @@ header p {
     font-size: 20px;
 }
 
+
 .library-container #bookTable tbody button {
     display: flex;
     padding: 10px;
     width: 100px;
+    background-color: yellow;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .library-container #bookTable tbody button i {
