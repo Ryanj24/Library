@@ -6,7 +6,7 @@ const addBtn = document.querySelector("#addBtn");
 const clearBtn = document.querySelector("#clearBtn");
 const myForm = document.querySelector("#myForm");
 
-let myLibrary = [];
+
 
 addBtn.addEventListener("click", () => {
     modalContainer.classList.add("active");
@@ -40,17 +40,16 @@ myForm.addEventListener("submit", (e) => {
         isCompleted = "No";
     }
 
-    //console.log(completedCheck);
-    //console.log(isCompleted);
+    
 
     let newBook = new Book(bookTitle, bookAuthor, bookPages, isCompleted);
-    addBookToLibrary(newBook);
+    
     addBookToTable(newBook);
 
     myForm.reset();
     modalContainer.classList.remove("active");
 
-    //console.log(myLibrary);
+    
 })
 
 function Book(title, author, pages, completed) {
@@ -58,10 +57,6 @@ function Book(title, author, pages, completed) {
     this.author = author;
     this.pages = pages;
     this.completed = completed;
-}
-
-function addBookToLibrary(book) {
-    myLibrary.push(book);
 }
 
 function addBookToTable(book) {
