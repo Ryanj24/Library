@@ -22,8 +22,6 @@ modalCloseBtn.addEventListener("click", () => {
 
 tableRows.addEventListener("click", function(e) {
     if (e.target.classList.contains("action-buttons")) {
-        //console.log("Hello");
-        //console.log(e.target.parentNode.parentNode.parentNode);
         e.target.parentNode.parentNode.parentNode.removeChild(e.target.parentNode.parentNode);
     }
 })
